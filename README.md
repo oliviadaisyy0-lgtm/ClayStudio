@@ -1,32 +1,26 @@
-# ClayStudio
-
-# Clay Studio — Website Project
+# Project Name: Clay Studio 
 
 ## Student Information
-- **Name:** [Your Full Name]
-- **Student Number:** [Your Student Number]
-- **Subject:** [Subject Name & Code]
-- **Group:** [Group name/number, if applicable]
-
----
+Student Name: Asukia Ebuta
+Module Name: WEDE5020
+Lecturer: Mr Lwazi
 
 ## Project Overview
-
-Clay Studio is a website built for a fictional small pottery business specialising in handmade ceramic homeware — mugs, bowls, plates, vases, and decorative pieces — alongside beginner pottery classes. The business began in 2015 as a home-studio operation and grew into a small, community-rooted pottery studio that had never had an online presence until this project.
-
-This website gives Clay Studio its first digital storefront: a place for customers to browse handmade pottery, learn about the studio's story, enquire about custom orders or classes, get in touch, create an account, and (as an added feature) allow other clay artists to submit their own pieces for sale.
+Clay studios attract and connect people who are interested in learning about exploring clay and pottery and create their own cute and aesthetics and allow artists to sell and promote their work. A platform where people can scroll through beautiful, cute clay and pottery design and inspiration.
+Encourage more people enjoy, learn handmade activities, decorate home, make cups, bowls and cute necklace.
 
 ---
 
 ## Website Goals and Objectives
+The main goals of the website are:
 
-- Establish an online presence for a business that previously had none.
-- Showcase handmade pottery pieces in an inviting, easy-to-browse layout.
-- Allow visitors to make enquiries about products, custom commissions, or pottery classes.
-- Provide clear contact information across multiple studio locations.
-- Reflect the brand's warm, handmade, artisanal identity through design.
-- Give returning visitors a personalised experience via account login.
-- Allow outside sellers to contribute new listings to the shop.
+• Create online platform for clay and pottery lovers to upload photos of their work
+
+• Allows handmade artists to promote and sell their work
+
+• Users can upload their aesthetic and cute ideas
+
+• Encourage other people more into handmade clay activity and take classes
 
 **Key Performance Indicators (KPIs):**
 - Number of enquiries submitted per month (product, custom order, or class bookings).
@@ -175,7 +169,15 @@ clay-studio/
 
 ## References
 
-*(Add your references here in your institution's required referencing style — e.g. Harvard. Include sources for any images, fonts, icons, libraries, or research content used.)*
+Schwatz,B.,2016. Top Pottery Blogs of 2015. Pottery Making Info. Available at: https://potterymakinginfo.com/news/top-pottery-blogs-of-2015/ [Accessed 13 August 2026]
+
+Schwatz,B.,2018. 033 Pottery Goals- MudTalk Podcast. Expert Clay. Available at: https://expertclay.com/podcast/pottery-goals/ [Accessed 13 August 2026]
+
+North Carolina Clay Club,2015. North Carolina Clay Club. Blog. Available at: https://ncclayclub.blogspot.com/ [Accessed 13 August 2026]
+
+Canva,2026. Color Palette Generator. Available at: https://www.canva.com/colors/color-palette-generator/ [Accessed 13 August 2026]
+
+Female Alchemy, 2026. Female Alchemy: Ceramic pieces, merch, & stickers. Available at: https://www.femalealchemy.com/ [Accessed 12 August 2026]
 
 - Google Fonts. Available at: https://fonts.google.com
 - Unsplash. Available at: https://unsplash.com
