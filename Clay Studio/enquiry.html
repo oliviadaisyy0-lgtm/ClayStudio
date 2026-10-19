@@ -1,0 +1,88 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry with Clay Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Clay Studio</div>
+  <div class="nav-group">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="products.html">Shop <span class="caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html#cute-clay">Cute Clay</a></li>
+            <li><a href="products.html#cups">Cups</a></li>
+            <li><a href="products.html#necklaces">Necklaces</a></li>
+            <li><a href="products.html#vases">Vases</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquiry.html" class="active">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+   <div class="icon-group">
+      <a href="products.html" class="nav-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="sell.html" class="nav-sell-link">Sell your clay</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <h1>Make an Enquiry</h1>
+    <p>Interested in a piece, selling your clay work, or booking a pottery class? Tell us more below.</p>
+  </section>
+
+  <section class="page-section">
+    <form id="enquiry-form" novalidate>
+      <div>
+        <label for="e-name">Name</label>
+        <input type="text" id="e-name" name="name" required>
+      </div>
+      <div>
+        <label for="e-email">Email</label>
+        <input type="email" id="e-email" name="email" required>
+      </div>
+      <div>
+        <label for="e-type">I'm enquiring about</label>
+        <select id="e-type" name="type" required>
+          <option value="">Select an option</option>
+          <option value="product">A product / item</option>
+          <option value="custom">A custom commission</option>
+          <option value="class">Booking a pottery class</option>
+          <option value="selling">Selling my clay work</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div>
+        <label for="e-item">Item / Class of Interest</label>
+        <input type="text" id="e-item" name="item" placeholder="e.g. Speckled Bud Vase, Beginner Wheel Class">
+      </div>
+      <div>
+        <label for="e-message">Message</label>
+        <textarea id="e-message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+    </form>
+    <div id="enquiry-response" class="form-response top" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>&copy; 2026 Clay Studio. All rights reserved.</footer>
+
+</body>
+</html>

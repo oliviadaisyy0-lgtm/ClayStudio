@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop with Clay Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Clay Studio</div>
+  <div class="nav-group">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="products.html" class="active">Shop <span class="caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html#cute-clay">Cute Clay</a></li>
+            <li><a href="products.html#cups">Cups</a></li>
+            <li><a href="products.html#necklaces">Necklaces</a></li>
+            <li><a href="products.html#vases">Vases</a></li>
+            <li><a href="products.html#bagcharms">Bag Charms</a></li>
+            <li><a href="products.html#moreclay">More Clay</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="icon-group">
+      <a href="products.html" class="nav-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="sell.html" class="nav-sell-link">Sell your clay</a>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="page-hero">
+    <h1>Shop with Clay Studio</h1>
+    <p>Each piece is thrown, glazed, and fired by hand ,no two are exactly alike.</p>
+  </section>
+    
+  <div class="auto-scroll-wrap">
+    <div class="auto-scroll-track">
+      <img src="Images/girls face mug.jpg" alt="girls face mug">
+      <img src="Images/lighter case.jpg" alt="lighter case clay">
+      <img src="Images/bestfriend.jpg" alt="Bestfriend clay keychain">
+      <img src="Images/claynecklace.jpg" alt="Clay necklace">
+      <img src="Images/mini weird girl.jpg" alt="Mini weird girl clay figure">
+      <img src="Images/Ryomen Sukuna Fingers.jpg" alt="Ryomen Sukuna Fingers clay figure">
+      <img src="Images/white cat.jpg" alt="White cat clay figure">
+      
+      <img src="Images/girls face mug.jpg" alt="girls face mug">
+      <img src="Images/lighter case.jpg" alt="lighter case clay">
+      <img src="Images/bestfriend.jpg" alt="Bestfriend clay keychain">
+      <img src="Images/claynecklace.jpg" alt="Clay necklace">
+      <img src="Images/mini weird girl.jpg" alt="Mini weird girl clay figure">
+      <img src="Images/Ryomen Sukuna Fingers.jpg" alt="Ryomen Sukuna Fingers clay figure">
+      <img src="Images/white cat.jpg" alt="White cat clay figure">
+    </div>
+  </div>
+
+  <div class="shop-search-wrap">
+    <label for="shop-search-input" class="sr-only">Search</label>
+    <input type="text" id="shop-search-input" placeholder="Search any clay item by name...">
+  </div>
+ 
+  
+  <nav class="shop-tabs" aria-label="Product categories">
+    <button class="shop-tab" data-category="cute-clay">Cute Clay</button>
+    <button class="shop-tab" data-category="cups">Cups</button>
+    <button class="shop-tab" data-category="necklaces">Necklaces</button>
+    <button class="shop-tab" data-category="vases">Vases</button>
+    <button class="shop-tab" data-category="bagcharms">Bag Charms</button>
+    <button class="shop-tab" data-category="moreclay">More Clay</button> 
+  </nav>
+ 
+  
+  <section class="page-section" id="new-listings-section" data-category="new-listings" style="display:none;">
+    <h2>Just Added By Sellers</h2>
+    <div class="product-grid" id="new-listings-grid"></div>
+  </section>
+
+
+  <section class="page-section" id="cute-clay" data-category="cute-clay">
+    <h2>Cute Clay</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/baby bunny.jpg" alt="Baby Bunny"></div>
+        <p>Little Bunny</p>
+        <div class="price">R70</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/brown star.jpg" alt="Brown Star"></div>
+        <p>Brown Star</p>
+        <div class="price">R130</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cat candles.jpg" alt="Cat Candles"></div>
+        <p>Cat Candles</p>
+        <div class="price">R150</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="cups" data-category="cups">
+    <h2>Cups</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cup cat clay.jpg" alt="Cat mug"></div>
+        <p>Cat Mug</p>
+        <div class="price">R130</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/sanrio ceramic.jpg" alt="sanrio ceramic mug"></div>
+        <p>Sanrio Mug</p>
+        <div class="price">R300</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/tea party.jpg" alt="tea party mug"></div>
+        <p>Tea Party Mug</p>
+        <div class="price">R300</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="necklaces" data-category="necklaces">
+    <h2>Necklaces</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cherry necklace.jpg" alt="Cherry clay necklace"></div>
+        <p>Cherry Necklace</p>
+        <div class="price">R100</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/Custom Mini Me Doll necklace.jpg" alt="Custom Mini Me Doll necklace"></div>
+        <p>Custom Mini Me Doll Necklace</p>
+        <div class="price">R70</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cool necklace.jpg" alt="Cool necklace"></div>
+        <p>Cool Necklace</p>
+        <div class="price">R250</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="vases" data-category="vases">
+    <h2>Vases</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cat paws.jpg" alt="Cat paw vase"></div>
+        <p>Cat Paw Vase</p>
+        <div class="price">R250</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/Olivia Pottery Girl.jpg" alt="Olivia Pottery Girl"></div>
+        <p>Olivia Pink Vase</p>
+        <div class="price">R400</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/Tom and jerry vase.jpg" alt="Tom and Jerry vase"></div>
+        <p>Tom and Jerry Vase</p>
+        <div class="price">R250</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="bagcharms" data-category="bagcharms">
+    <h2>Bag Charms</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/bag charm diy.jpg" alt="Bag Charm DIY"></div>
+        <p>Bag Charm DIY</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/people bag charm.jpg" alt="People Bag Charm"></div>
+        <p>People Bag Charm</p>
+        <div class="price">R270</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cat bag charm.jpg" alt="Cat Bag Charm"></div>
+        <p>Cat Bag Charm</p>
+        <div class="price">R200</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="moreclay" data-category="moreclay">
+    <h2>More Clay</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/bunny keychains.jpg" alt="Bunny Keychains"></div>
+        <p>Bunny Keychains</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/cat flower.jpg" alt="Cat Flower"></div>
+        <p>Cat Flower</p>
+        <div class="price">R90</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/marceline and princess bubblegum.jpg" alt="Marceline and Princess Bubblegum"></div>
+        <p>Marceline and Princess Bubblegum</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/rings.jpg" alt="Rings"></div>
+        <p>Rings</p>
+        <div class="price">R230</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/sleepy bear plate.jpg" alt="Sleepy Bear Plate"></div>
+        <p>Sleepy Bear Plate</p>
+        <div class="price">R130</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/seastar with shell.jpg" alt="Seastar with Shell"></div>
+        <p>Seastar with Shell</p>
+        <div class="price">R200</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/book holder.jpg" alt="Book Holder"></div>
+        <p>Book Holder</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/18th birthday.jpg" alt="18th Birthday Clay Figure"></div>
+        <p>18th Birthday Clay Figure</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/clay keyrings.jpg" alt="Clay Keyrings"></div>
+        <p>Clay Keyrings</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/necklace holder.jpg" alt="Necklace Holder"></div>
+        <p>Necklace Holder</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/phone holder.jpg" alt="Phone Holder"></div>
+        <p>Phone Holder</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/i love doing commissions with a lot of detail 🖤.jpg" alt="I Love Doing Commissions"></div>
+        <p>I Love Doing Commissions</p>
+        <div class="price">R150</div>
+       </div>
+       <div class="product-card">
+        <div class="explore-pic"><img src="Images/pink wing heart.jpg" alt="Pink Wing Heart"></div>
+        <p>Pink Wing Heart</p>
+        <div class="price">R300</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/nagi shidou clay figure.jpg" alt="Nagi Shidou Clay Figure"></div>
+        <p>Nagi Shidou Clay Figure</p>
+        <div class="price">R150</div>
+      </div>
+      <div class="product-card">
+        <div class="explore-pic"><img src="Images/animals candles.jpg" alt="Animals Candles"></div>
+        <p>Animals Candles</p>
+        <div class="price">R150</div>
+       </div>
+
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 Clay Studio. All rights reserved.</footer>
+
+</body>
+</html>

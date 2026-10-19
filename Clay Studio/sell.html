@@ -1,0 +1,104 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sell Your clay </title>
+<meta name="description" content="Are you a potter? Submit your handmade ceramic piece to Clay Studio, set your own price, and get featured in our shop.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Clay Studio</div>
+  <div class="nav-group">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="products.html">Shop <span class="caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html#cute-clay">Cute Clay</a></li>
+            <li><a href="products.html#cups">Cups</a></li>
+            <li><a href="products.html#necklaces">Necklaces</a></li>
+            <li><a href="products.html#vases">Vases</a></li>
+            <li><a href="products.html#bagcharms">Bag Charms</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="sell.html" class="active">Sell</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="icon-group">
+      <a href="products.html" class="nav-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="sell.html" class="nav-sell-link">Sell your clay</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <h1>Sell Your Clay With Us</h1>
+    <p>Upload a photo, add a title, and set your price.</p>
+  </section>
+
+  <section class="page-section">
+    <form id="sell-form" class="sell-layout">
+
+      <!-- LEFT: upload box -->
+      <div class="upload-box">
+        <label for="s-photo" class="upload-label" id="upload-label">
+          <div class="upload-icon">&#128247;</div>
+          <p class="upload-title">Upload your photo</p>
+          <p class="upload-sub">Click to choose a file<br>JPG, PNG up to 20MB</p>
+        </label>
+        <input type="file" id="s-photo" name="photo" accept="image/*" required class="upload-input">
+        <img id="photo-preview" class="photo-preview" alt="Preview of your photo">
+      </div>
+
+      
+      <div class="sell-fields">
+        <div>
+          <label for="s-title">Title of Design</label>
+          <input type="text" id="s-title" name="title" placeholder="Tell everyone what your piece is about" required>
+        </div>
+
+        <div>
+          <label for="s-price">Price (ZAR)</label>
+          <input type="number" id="s-price" name="price" min="0" step="1" placeholder="e.g. 250" required>
+        </div>
+
+        <div>
+          <label for="s-category">Category</label>
+          <select id="s-category" name="category" required>
+            <option value="">Select a category</option>
+            <option value="cute-clay">Cute Clay</option>
+            <option value="cups">Cups</option>
+            <option value="necklaces">Necklaces</option>
+            <option value="vases">Vases</option>
+            <option value="bagcharms">Bag Charms</option>
+            <option value="more-clay">More Clay</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Post to Shop</button>
+      </div>
+
+    </form>
+    <div id="sell-response" class="form-response" aria-live="polite"></div>
+  </section>
+</main>
+
+<footer>&copy; 2026 Clay Studio. All rights reserved.</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

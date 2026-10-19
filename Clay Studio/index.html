@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clay Studio </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="logo">Clay Studio</div>
+  <div class="nav-group">
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="products.html">Shop <span class="caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html#cute-clay">Cute Clay</a></li>
+            <li><a href="products.html#cups">Cups</a></li>
+            <li><a href="products.html#necklaces">Necklaces</a></li>
+            <li><a href="products.html#vases">Vases</a></li>
+            <li><a href="products.html#bagcharms">Bag Charms</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="icon-group">
+      <a href="products.html" class="nav-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="sell.html" class="nav-sell-link">Sell your clay</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Discover beautiful handmade pottery</h1>
+    <div class="pic-row">
+      <div class="pic-card"><img src="Images/keychain.jpg" alt="keychain clay"></div>
+      <div class="pic-card"><img src="Images/kitty.jpg" alt="hello kitty clay"></div>
+      <div class="pic-card"><img src="Images/cat.jpg" alt="cat cup clay"></div>
+    </div>
+  </section>
+
+  <section class="explore">
+    <h2>Explore More Clay</h2>
+    <div class="explore-row">
+      <a href="products.html#cute clay" class="explore-item">
+        <div class="explore-pic"><img src="Images/cute.png.jpg" alt="cute bunny clay"></div>
+        <span>Cute Clay</span>
+      </a>
+      <a href="products.html#cups" class="explore-item">
+        <div class="explore-pic"><img src="Images/cup.png.jpg" alt="clay cup"></div>
+        <span>Cups</span>
+      </a>
+      <a href="products.html#necklaces" class="explore-item">
+        <div class="explore-pic"><img src="Images/necklace.png.jpg" alt="handmade necklace clay"></div>
+        <span>Necklaces</span>
+      </a>
+      <a href="products.html#vases" class="explore-item">
+        <div class="explore-pic"><img src="Images/vase.png.jpg" alt="flowery vase"></div>
+        <span>Vases</span>
+      </a>
+      <a href="products.html#bagcharms" class="explore-item">
+        <div class="explore-pic"><img src="Images/cute bag charms.jpg" alt="bag charm clay"></div>
+        <span>Bag Charms</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="community">
+    <h2>Join the Clay Studio community</h2>
+        <div class="auth-buttons" id="auth-buttons-logged-out">
+      <button class="btn btn-primary" id="open-login">Login</button>
+      <button class="btn btn-secondary" id="open-signup">Sign Up</button>
+      <a href="products.html" class="btn-guest">Continue as Guest</a>
+    </div>
+
+    <div class="auth-buttons" id="auth-buttons-logged-in" style="display:none;">
+      <p id="welcome-message" style="font-family:Arial, sans-serif; font-size:0.9rem; margin-bottom:10px;"></p>
+      <button class="btn btn-secondary" id="logout-btn">Log Out</button>
+    </div>
+  </section>
+
+  
+  <div class="auth-overlay" id="auth-overlay">
+    <div class="auth-modal">
+      <span class="auth-close" id="auth-close">&times;</span>
+      <h2 id="auth-modal-title">Login</h2>
+      <form id="auth-form">
+        <div id="signup-name-field" style="display:none;">
+          <label for="auth-name">Name</label>
+          <input type="text" id="auth-name">
+        </div>
+        <div>
+          <label for="auth-email">Email</label>
+          <input type="email" id="auth-email" required>
+        </div>
+        <div>
+          <label for="auth-password">Password</label>
+          <input type="password" id="auth-password" required minlength="4">
+        </div>
+        <button type="submit" class="btn btn-primary" id="auth-submit-btn">Login</button>
+      </form>
+      <p id="auth-error" class="form-error" style="display:none; margin-top:12px;"></p>
+    </div>
+  </div>
+
+<footer>&copy; 2026 Clay Studio. All rights reserved.</footer>
+
+</body>
+</html>
