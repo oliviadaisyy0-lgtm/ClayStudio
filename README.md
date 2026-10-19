@@ -181,5 +181,6 @@ Canva,2026. Color Palette Generator. Available at: https://www.canva.com/colors/
 
 Female Alchemy, 2026. Female Alchemy: Ceramic pieces, merch, & stickers. Available at: https://www.femalealchemy.com/ [Accessed 12 August 2026]
 
-- Google Fonts. Available at: https://fonts.google.com
-- Unsplash. Available at: https://unsplash.com
+Google Fonts. Available at: https://fonts.google.com
+
+Unsplash. Available at: https://unsplash.com
