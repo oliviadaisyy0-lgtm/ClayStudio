@@ -34,68 +34,106 @@ The main goals of the website are:
 
 ## Key Features and Functionality
 
-- **Homepage** — hero introduction, featured pottery images, categorized "Explore More Clay" section, and a login/sign up area.
-- **Shop** — product listings grouped into tabbed categories (Cute Clay, Cups, Necklaces, Vases, plus a dynamic "Just Added" tab for seller submissions), a live search filter, and an auto-scrolling image carousel.
-- **About** — the studio's founding story and photos of the making process, viewable in a lightbox.
-- **Enquiry** — a form for product, custom commission, or class enquiries, with a simulated cost/availability response.
-- **Contact** — two studio locations, opening hours, a general message form, and an FAQ accordion.
-- **Sell** — a page allowing other clay artists to submit a piece (photo, title, price, category); submissions are saved and immediately appear in the Shop's "Just Added" tab.
-- Fully responsive layout (mobile and desktop).
-- Consistent navigation with a working "Shop" dropdown.
+- **Homepage:** hero pictures, an "Explore More Clay" section linking to each Shop category, and Login / Sign Up / Continue as Guest.
+- **Shop:** product categories as tabs (Cute Clay, Cups, Necklaces, Vases, Bag Charms, More Clay) plus a "Just Added" tab for seller items. It has live search, sort by price or name, an auto-scrolling picture strip and a lightbox.
+- **About:** the studio story with two photos (lightbox) and a newsletter sign-up form (visual only, it does not send anything yet).
+- **Enquiry:** a validated form with a preferred-date picker. A thank-you with cost and availability information appears without reloading the page.
+- **Contact:** a validated form (South African phone number, type of message), an interactive map with both studios, an FAQ accordion and LocalBusiness structured data.
+- **Sell:** upload a photo (with a live preview), add a title, category and price. The piece appears in the Shop under "Just Added" and can be removed again.
+- Consistent navigation with a Shop dropdown, the brand name links back to the home page, and the layout is responsive.
 
 ### JavaScript Enhancements (Part 3)
-- **Shop category tabs** — JavaScript shows/hides product sections instead of all being visible at once.
-- **Lightbox gallery** — clicking any product, hero, or About page image opens it enlarged in an overlay (closable via click-outside, close button, or Escape key).
-- **FAQ accordion** — expandable/collapsible questions on the Contact page.
-- **Live search filter** — typing in the Shop search bar filters visible products in real time.
-- **Form validation** — both the Enquiry and Contact forms are validated with JavaScript (name length, email format, message length) and show inline success/error messages without a page reload.
-- **Distinct form behaviour** — the Enquiry form returns a simulated cost/availability response based on the enquiry type selected; the Contact form compiles the message and opens the visitor's email client via `mailto:`.
-- **Auto-scrolling image carousel** — a continuously looping strip of pottery images on the Shop page (pure CSS animation, pauses on hover).
-- **Login / Sign Up** — client-side account creation and login using the browser's `localStorage`. Once logged in, the homepage shows a personalised welcome message instead of the login buttons.
-- **Dynamic content from the Sell page** — when a seller submits a piece on `sell.html`, the photo, title, price, and category are saved to `localStorage` and dynamically rendered as a new product card in the Shop under a "Just Added" tab — demonstrating DOM manipulation and dynamically loaded content.
 
-> **Note on Login/Sign Up security:** this is a client-side demonstration only, built to satisfy the JavaScript/DOM requirements of this assignment. Account details are stored in plain text in the browser's `localStorage` and are **not secure** — anyone using the same browser/device could view them in DevTools. A production login system would require a server, a database, and encrypted password storage (e.g. hashing with bcrypt), which is beyond the scope of a static HTML/CSS/JS site.
+| Feature | Page | How it works |
+|---|---|---|
+| Shop tabs | Shop | JavaScript shows one category at a time and reads the category from the web address. |
+| Lightbox gallery | Home, Shop, About | Click a picture to see it at full height in an overlay. Esc, the X or a click outside closes it. |
+| FAQ accordion | Contact | Click a question to expand or collapse its answer. |
+| Interactive map | Contact | Leaflet map with a marker and popup for each studio and a "Get directions" link. |
+| Live search and sort | Shop | Typing filters products as you type; the dropdown sorts by price or name. |
+| Auto-scrolling strip | Shop | CSS animation that loops and pauses on hover. |
+| Form validation | Enquiry, Contact | JavaScript checks name, email, South African phone number, dates and message length, and shows red error messages. |
+| AJAX form submission | Enquiry, Contact | `fetch()` sends the data to FormSubmit, which emails claystudio@gmail.com. The page does not reload. If sending fails, the visitor's email program opens as a backup. |
+| Login / Sign Up | Home | Accounts are kept in the browser's localStorage with a salted SHA-256 hash of the password. |
+| Sell to Shop | Sell, Shop | The photo is resized with a canvas, saved in localStorage and turned into a product card with DOM methods. |
+| Photo preview | Sell | The chosen photo is shown in the upload box before posting. |
+
+> **Note:** the login, accounts and seller items live in the visitor's own browser. They are a front-end demonstration, and a real shop would need a server and database.
+
+
 
 ---
 
 ## SEO Implementation
 
-- Unique, descriptive `<title>` and `<meta name="description">` tags on every page.
-- Descriptive `alt` text on all images.
-- Logical heading hierarchy (H1 per page, H2 for section headings).
-- Clean, descriptive URLs (e.g. `products.html`, `about.html`).
-- Internal linking throughout (nav, Shop dropdown, Explore section, Sell-to-Shop flow).
-- Mobile-responsive layout.
-- `robots.txt` — instructs search engine crawlers to index the full site.
-- `sitemap.xml` — lists all pages for search engines (update the placeholder domain once deployed).
-
-*(Off-page SEO — backlinks, social media promotion, local SEO — is outside the scope of what can be implemented directly in the site's code, and would be carried out post-launch as part of ongoing marketing.)*
+- A unique title and meta description on every page, using the keywords below.
+- One H1 per page, with H2 and H3 headings below it in order.
+- Descriptive alt text and descriptive file names on images; lazy loading on pictures below the first screen.
+- Clean page addresses (about.html, products.html and so on) and internal links in the menu, the Explore section and the Sell-to-Shop flow.
+- Mobile-friendly: viewport tag and a responsive layout, checked at phone width with no sideways scrolling.
+- `robots.txt` and `sitemap.xml`, updated with the live address.
+- LocalBusiness structured data (JSON-LD) for both studios on the Contact page.
+- Off-page SEO plan (below).
 
 ---
 
 ## Technical Requirements
 
-- **Languages:** HTML5, CSS3, vanilla JavaScript (no external frameworks/libraries used).
-- **Structure:** all pages share one external stylesheet (`css/style.css`) and one external script (`js/main.js`).
-- **Data persistence:** browser `localStorage` is used for login accounts and seller-submitted listings (client-side only, no backend database).
-- **Hosting:** deployed via [Netlify / GitHub Pages — update with whichever you use].
+- **Languages:** HTML5, CSS3 and JavaScript (no framework).
+- **Libraries and services:** Leaflet (interactive map), OpenStreetMap and CARTO (map tiles), FormSubmit (delivers form messages by email), Google Fonts (Caveat and Jost) and Unsplash (stock photos).
+- **Data storage:** the browser's localStorage for accounts and seller items. There is no server or database.
+- **Hosting:** Netlify, free plan, with HTTPS included. Live site: [add your link here].
 
 ---
 
-## Timeline and Milestones
+## Keyword Research
+
+**Primary keywords:** handmade pottery Johannesburg, ceramic mugs, pottery classes Johannesburg, clay bag charms, handmade clay necklaces, custom pottery commission.
+
+**Method:** I typed each phrase into Google and noted the autocomplete suggestions, then kept the phrases that match what the studio really sells.
+
+| Page | Keywords used | Where |
+|---|---|---|
+| Home | handmade pottery, ceramics, Johannesburg | title, meta description, main heading |
+| Shop | mugs, cups, vases, necklaces, bag charms | title, meta description, category headings |
+| About | pottery studio, since 2015 | title, meta description, story text |
+| Enquiry | pottery classes, custom commission | title, meta description |
+| Contact | pottery studio Johannesburg, opening hours | title, meta description, LocalBusiness data |
+
+## Off-Page SEO Plan
+
+**Backlinks**
+- Create a Google Business Profile for each studio and link it to the website.
+- List the studio in the Ceramic Arts Daily community and on local craft-market and art-fair pages, with a link back to the site.
+- Ask the local cafes that order custom tableware to link to the Shop page from their own websites.
+
+**Social media**
+- Post new pieces and class dates on Instagram and Pinterest, with the website link in the bio.
+- Use a Facebook page for class bookings and community events.
+
+**Local SEO**
+- Keep the studio name, address and phone number identical everywhere they appear.
+- Use the LocalBusiness structured data on the Contact page for both studios (Rosebank and Alberton).
+- Use "Johannesburg" in page titles, headings and descriptions.
+
+## Security Measures
+
+- The live site is served over HTTPS (provided automatically by the host).
+- Every form is validated in JavaScript before anything is sent.
+- Text typed by visitors is shown with `textContent`, never inserted as HTML, so it cannot run as code.
+- Passwords are stored as a salted SHA-256 hash (Web Crypto API), never as plain text.
+- External links use `rel="noopener noreferrer"`.
+- **Limits:** the login system is a front-end demonstration. Accounts are saved in the visitor's own browser, so a real shop would need a server and database.
 
 | Milestone | Status |
 |---|---|
-| Proposal submission & approval | Complete |
-| Content research & sourcing | Complete |
-| Sitemap & file/folder structure | Complete |
-| Part 1: HTML pages built (Home, Shop, About, Enquiry, Contact) | Complete |
-| Part 1: GitHub repository setup & initial commits | Complete |
-| Part 2: Additional Sell page & navigation updates | Complete |
-| Part 3: JavaScript interactivity (tabs, lightbox, accordion, search, validation) | Complete |
-| Part 3: Login/Sign Up & dynamic Sell-to-Shop listings | Complete |
-| Part 3: SEO implementation (meta tags, robots.txt, sitemap.xml) | Complete |
-| Part 3: Deployment to live hosting | In progress |
+| Part 1: pages, navigation, GitHub setup | Complete |
+| Part 2: Sell page, navigation and design updates | Complete |
+| Part 3: JavaScript interactivity (tabs, lightbox, accordion, search and sort, map) | Complete |
+| Part 3: forms with validation and AJAX submission | Complete |
+| Part 3: SEO (meta tags, structured data, robots.txt, sitemap.xml, keywords) | Complete |
+| Part 3: security improvements (hashed passwords, safe text output) | Complete |
+| Part 3: deployment to Netlify | [Complete / In progress] |
 
 ---
 
@@ -140,32 +178,42 @@ clay-studio/
 
 ## Changelog
 
-### Part 1
-- Initial project structure created.
-- Built 5 core pages: Home, Shop, About, Enquiry, Contact.
-- Created shared stylesheet with site-wide colour variables.
-- Added working navigation with a Shop dropdown linking to product categories.
-
-### Part 2
-- Added a new Sell page allowing clay artists to submit items with a photo, title, and price.
-- Updated navigation: replaced account/cart icons with a search link and a "Sell" link.
-- Enlarged and restyled homepage and shop product images.
-- Added hover/press animation effects to product images (CSS only).
-- Updated About page to include two images and a newsletter signup section.
-- Fixed folder structure issues (CSS/HTML path corrections).
-
 ### Part 3
-- Implemented JavaScript-driven Shop category tabs (replacing static always-visible sections).
-- Added a lightbox gallery for product, hero, and About page images.
+
+**Part 2 feedback**
+
+
+**Interactive features**
+- Added Shop category tabs, a live search filter and a sort by price or name.
+- Added a lightbox gallery for product, hero and About images. Pictures now open at full height and uncropped, and small pictures load a bigger version.
 - Added an FAQ accordion to the Contact page.
-- Added a live search filter on the Shop page.
-- Implemented JavaScript form validation and distinct response behaviour for the Enquiry form (simulated cost/availability reply) and Contact form (compiles and opens a `mailto:` email).
-- Added a client-side Login/Sign Up system using `localStorage` (with a documented security limitation — see note above).
-- Added a continuously auto-scrolling image carousel to the Shop page (pure CSS).
-- Connected the Sell page to the Shop page: submitted items (photo, title, price, category) are saved and dynamically rendered as new product cards under a "Just Added" tab.
-- Added SEO meta titles and descriptions to every page.
-- Added `robots.txt` and `sitemap.xml`.
-- Re-added a category dropdown to the Sell form (required so new submissions can be sorted into the correct Shop tab).
+- Added an interactive Leaflet map with both studios, popups and a directions link.
+- Added an auto-scrolling picture strip to the Shop page.
+- Added a live photo preview to the Sell page.
+
+**Dynamic content**
+- Sell page items are saved and shown in the Shop under "Just Added", and a Remove button deletes them again.
+- Added Login / Sign Up using browser storage.
+
+**Forms**
+- Enquiry and Contact forms are validated in JavaScript with red error messages shown above the form.
+- Added South African phone number validation, a preferred-date field with date validation, and a "type of message" field.
+- Forms are sent by AJAX (`fetch`) with a form `action`, and the visitor sees a personal thank-you message. The visitor's email program opens as a backup if sending fails.
+- Enquiry replies include cost and availability information.
+
+**SEO and speed**
+- Added a title and meta description to every page; fixed the Contact page heading order.
+- Added `robots.txt`, `sitemap.xml` and LocalBusiness structured data.
+- Added lazy loading and renamed images with descriptive file names.
+- Added keyword research and an off-page SEO plan to the README.
+
+**Security**
+- Passwords are now stored as salted SHA-256 hashes instead of plain text.
+- Visitor text is shown with `textContent` and external links use `rel="noopener noreferrer"`.
+
+**Other fixes**
+- The brand name now links to the home page on every page.
+- Fixed the form boxes starting their text too far from the left edge.
 
 ---
 
@@ -184,3 +232,7 @@ Female Alchemy, 2026. Female Alchemy: Ceramic pieces, merch, & stickers. Availab
 Google Fonts. Available at: https://fonts.google.com
 
 Unsplash. Available at: https://unsplash.com
+
+ Agafonkin, V.,2023. Leaflet: an open-source JavaScript library for interactive maps. Available at: https://leafletjs.com (Accessed: 28 october 2026).
+ 
+ Mozilla Developer Network (n.d.) *SubtleCrypto*. Available at: https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto (Accessed:  28 october 2026).
