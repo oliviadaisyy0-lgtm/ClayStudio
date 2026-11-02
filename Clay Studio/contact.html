@@ -1,0 +1,135 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact with Clay Studio</title>
+<meta name="description" content="Get in touch with Clay Studio for questions about products, custom commissions, or pottery classes.">
+<meta name="keywords" content="Clay Studio, pottery, handmade clay, contact us, enquiry form">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+
+<header>
+ <a href="index.html" class="logo">Clay Studio</a>
+  <div class="nav-group">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown" tabindex="0">
+          <a href="products.html">Shop <span class="caret">&#9662;</span></a>
+          <ul class="dropdown-menu">
+            <li><a href="products.html#cute-clay">Cute Clay</a></li>
+            <li><a href="products.html#cups">Cups</a></li>
+            <li><a href="products.html#necklaces">Necklaces</a></li>
+            <li><a href="products.html#vases">Vases</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+   <div class="icon-group">
+      <a href="products.html" class="nav-search-btn" aria-label="Search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </a>
+      <a href="sell.html" class="nav-sell-link">Sell your clay</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <h1>Get In Touch</h1>
+    <p>Questions about a piece, a custom order, or a class? We'd love to hear from you.</p>
+  </section>
+
+  <section class="page-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="sr-only">Our studios</h2>
+        <div id="map" class="studio-map"></div>
+        <p class="map-open">
+          <a href="https://www.google.com/maps/place/10+Babington+St,+Fairwood,+Johannesburg,+2192/data=!4m2!3m1!1s0x1e950dbf8856f525:0xef786137c8fe3407?sa=X&amp;ved=1t:242&amp;ictx=111"
+             target="_blank" rel="noopener noreferrer">Open in Google Maps &rarr;</a>
+        </p>
+
+        <h3>Studio One</h3>
+        <p>10 Babington Street, Fairwood, Johannesburg<br>Open Tuesday to Thursday, 9am&ndash;5pm</p>
+
+        <h3>Studio Two</h3>
+        <p>45 Jackland Road, Alberton, Johannesburg<br>Open Friday to Sunday, 10am&ndash;3pm</p>
+
+        <h3>Email &amp; Phone</h3>
+        <p>claystudio@gmail.com<br>+27 77 555 0000 <br> +27 77 115 0090</p>
+      </div>
+
+      <div class="contact-form">
+      <form id="contact-form" action="https://formsubmit.co/claystudio@gmail.com" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Message from the Clay Studio website">
+      <input type="hidden" name="_captcha" value="false">
+      <div>
+      <label for="c-name">Name</label>
+      <input type="text" id="c-name" name="name" required>
+     </div>
+     <div>
+     <label for="c-email">Email</label>
+     <input type="email" id="c-email" name="email" required>
+     </div>
+     <div>
+     <label for="c-phone">Phone</label>
+     <input type="tel" id="c-phone" name="phone" placeholder="e.g. 082 123 4567" required>
+     </div>
+     <div>
+    <label for="c-type">Type of message</label>
+    <select id="c-type" name="message_type" required>
+    <option value="">Select an option</option>
+    <option value="General question">General question</option>
+    <option value="Feedback">Feedback</option>
+    <option value="Help with an order">Help with an order</option>
+    <option value="Something else">Something else</option>
+   </select>
+   </div>
+     <div>
+     <label for="c-message">Message</label>
+     <textarea id="c-message" name="message" required></textarea>
+     </div>
+     <button type="submit" class="btn btn-primary">Send Message</button>
+     </form>
+    <div id="contact-response" class="form-response" aria-live="polite"></div>
+    </div>
+  </div>
+   </section>
+
+  
+  <section class="page-section">
+    <h2>Asked Questions</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-question">Do you ship pottery nationwide?</button>
+        <div class="accordion-answer">Yes, we ship across South Africa. Delivery usually takes 3-5 business days depending on your location.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-question">Can I visit the studio without booking a class?</button>
+        <div class="accordion-answer">Absolutely! Both studio locations are open for browsing during business hours, no appointment needed.</div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-question">Do you offer gift wrapping?</button>
+        <div class="accordion-answer">Yes, we offer complimentary gift wrapping on request for any purchase, you could just mention it in your enquiry.</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 Clay Studio. All rights reserved.</footer>
+
+</body>
+</html>
